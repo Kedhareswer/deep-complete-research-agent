@@ -208,7 +208,8 @@ async def send_file_paths(websocket, file_paths: Dict[str, str]):
 def get_config_dict(
     langchain_api_key: str, openai_api_key: str, tavily_api_key: str,
     google_api_key: str, google_cx_key: str, bing_api_key: str,
-    searchapi_api_key: str, serpapi_api_key: str, serper_api_key: str, searx_url: str
+    searchapi_api_key: str, serpapi_api_key: str, serper_api_key: str, searx_url: str,
+    groq_api_key: str = '', openrouter_api_key: str = '', openrouter_limit_rps: str = '1'
 ) -> Dict[str, str]:
     return {
         "LANGCHAIN_API_KEY": langchain_api_key or os.getenv("LANGCHAIN_API_KEY", ""),
@@ -221,6 +222,9 @@ def get_config_dict(
         "SERPAPI_API_KEY": serpapi_api_key or os.getenv("SERPAPI_API_KEY", ""),
         "SERPER_API_KEY": serper_api_key or os.getenv("SERPER_API_KEY", ""),
         "SEARX_URL": searx_url or os.getenv("SEARX_URL", ""),
+        "GROQ_API_KEY": groq_api_key or os.getenv("GROQ_API_KEY", ""),
+        "OPENROUTER_API_KEY": openrouter_api_key or os.getenv("OPENROUTER_API_KEY", ""),
+        "OPENROUTER_LIMIT_RPS": openrouter_limit_rps or os.getenv("OPENROUTER_LIMIT_RPS", "1"),
         "LANGCHAIN_TRACING_V2": os.getenv("LANGCHAIN_TRACING_V2", "true"),
         "DOC_PATH": os.getenv("DOC_PATH", "./my-docs"),
         "RETRIEVER": os.getenv("RETRIEVER", ""),

@@ -70,6 +70,9 @@ class ConfigRequest(BaseModel):
     SEARX_URL: str = ''
     XAI_API_KEY: str
     DEEPSEEK_API_KEY: str
+    GROQ_API_KEY: str = ''
+    OPENROUTER_API_KEY: str = ''
+    OPENROUTER_LIMIT_RPS: str = '1'
 
 
 # App initialization
