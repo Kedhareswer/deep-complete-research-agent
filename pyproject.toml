@@ -20,7 +20,7 @@ json-repair = "^0.29.8"
 json5 = "^0.9.25"
 langchain = "^0.3.18"
 langchain_community = "^0.3.17"
-langchain-openai = "^0.3.6"
+langchain-openai = "^1.0.2"
 langgraph = ">=0.2.73,<0.3"
 loguru = "^0.7.2"
 lxml = { version = ">=4.9.2", extras = ["html_clean"] }
